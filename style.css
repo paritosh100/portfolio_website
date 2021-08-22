@@ -122,23 +122,23 @@
 }
 .img-gallery{
     width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding: 50px 0px;
 }
 .img-gallery .img-row{
     margin-top: 20px;
+   
     height:100%;
     display:inline-flex;
     padding: 5px 20px;
+    justify-content: center;
    
 }
 .img-gallery .img-row .img-cell{
     width:30%;
     overflow: hidden;
-    margin-block-end: 20px;
-
+    margin-inline: 10px;
 }
 .img-cell img{
     max-width:100% ; 
@@ -267,7 +267,7 @@
 
 /*Media Queries*/
 
-@media screen and (min-width:1024px) {
+@media screen and (max-width:1024px) {
     .hero{
        min-width: 100%;
     }
@@ -309,7 +309,7 @@
     }
     
 }
-@media screen and (min-width:768px) {
+@media screen and (max-width:768px) {
     .header{
         padding: 20px 80px;
     }
@@ -354,14 +354,16 @@
         font-size:6rem;
     }
     .input-area{
+        width: 50%;
+        
         height: 100%;
         padding:20px ;
     }
     .input-area .input-style{
-        width: 350px;
+        min-width: 300px;
     }
     .contact-area .contact-us h1{
-        font-size: 30px;
+        font-size: 40px;
     }
     .contact-us ion-icon{
         font-size: 22px;
@@ -476,6 +478,7 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
     .img-cell{
@@ -500,7 +503,7 @@
     }
     .sci{
         min-width: 100%;
-        display: flex;
+        display: block;
         flex-direction: column;
         align-items: start;
     }
@@ -598,12 +601,13 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
     .img-cell{
         min-width: 100%;
-        height: 50%;
-        margin: 0px;
+       
+        margin: 10px;
     }
     .img-gallery .learn-btn{
         background-color: var(--primary-yellow);
@@ -680,19 +684,20 @@
     .port-heading h1{
         position: absolute;
         left: 50%;
-        bottom: -330px;
+        bottom: -100px;
         transform: translate(-50%);
         font-size: 2rem;
+        color: var(--primary-yellow);
     }
     .design-part{
         text-align: center;
         width: 100%;
         position: relative;
-        top: 140px;
+        top: 0px;
         padding-left: 0;
         display: flex;
         flex-direction: column;
-        padding: 50px;
+        padding:0 50px;
     }
     .design-part h1{
         font-size:2.5rem;
@@ -704,10 +709,13 @@
     }
     .input-area{
         height: 100%;
-        padding:20px;  
+        padding:10px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
     .input-area .input-style{
-        width: 100%;
+        min-width: 200px;
         font-size:15px ;
     }
     .contact-area .contact-us h1{
@@ -725,15 +733,15 @@
     }
     .img-row{
         overflow: hidden;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         width: 100%;
+        align-items: center;
     }
     .img-cell{
         min-width: 100%;
         height: 50%;
-        margin: 0px;
+        margin: 10px;
     }
     .img-gallery .learn-btn{
         background-color: var(--primary-yellow);
@@ -742,7 +750,7 @@
         letter-spacing: 1px;
         border: none;
         outline: none;
-        font-size: 0.775rem;
+        font-size: 0.675rem;
         margin: 40px auto;
     }
     .design-part .learn-btn{
@@ -752,7 +760,8 @@
     }
     .sci{
         min-width: 100%;
-        display: flex;
+        display: block;
+        align-items: center;
         justify-content: center;
     }
     .sci ion-icon{
@@ -766,7 +775,7 @@
     }
     .input-area .submit-contact{
         margin: 10px auto;
-        padding: 10px 20px ;
+        padding: 10px 10px ;
     }
     .contact-area{
         display: flex;
@@ -777,5 +786,11 @@
     }
     .contact-us{
         text-align: center;
+    }
+    .img-gallery{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
     }
 }
